@@ -1,5 +1,6 @@
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -22,7 +23,7 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
-    plugins: [react(), cnamePlugin()],
+    plugins: [tailwindcss(), react(), cnamePlugin()],
     base: env.VITE_BASE_URL || '/',
   }
 })

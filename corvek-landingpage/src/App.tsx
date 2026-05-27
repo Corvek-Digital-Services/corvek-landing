@@ -1,78 +1,130 @@
-import './App.css'
+import { Navbar } from './components/Navbar'
+import { Hero } from './components/Hero'
+import { Logo } from './components/Logo'
+import { Button } from './components/Button'
 
 function App() {
   return (
-    <>
-      <header className="header">
-        <div className="logo-container">
-          <span className="logo-text">CORVEK</span>
-          <span className="logo-subtext">Digital Services</span>
-        </div>
-      </header>
+    <div className="min-h-screen bg-background text-on-surface flex flex-col selection:bg-electric-indigo selection:text-white">
+      {/* Navigation */}
+      <Navbar />
 
-      <main className="main-content">
-        <div className="card">
-          <div className="badge">
-            <span className="badge-dot"></span>
-            <span>Under Maintenance</span>
-          </div>
-          
-          <div className="art-container">
-            <div className="glow-effect"></div>
-            <svg className="tech-graphic" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="44" stroke="url(#electric-glow)" strokeWidth="1.2" strokeDasharray="4 6" className="rotate-clockwise" />
-              <circle cx="50" cy="50" r="36" stroke="var(--accent)" strokeWidth="0.6" opacity="0.35" />
-              <path d="M50 22L70 42H58L50 30L42 42H30L50 22Z" fill="var(--accent)" fillOpacity="0.85" className="pulse-slow" />
-              <path d="M50 78L78 50H62L50 62L38 50H22L50 78Z" fill="url(#electric-glow)" fillOpacity="0.5" className="pulse-slow-delayed" />
-              <rect x="47" y="47" width="6" height="6" rx="1" fill="var(--accent)" className="rotate-counter" />
-              <defs>
-                <linearGradient id="electric-glow" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="var(--accent)" />
-                  <stop offset="1" stopColor="rgba(0, 229, 255, 0.05)" />
-                </linearGradient>
-              </defs>
-            </svg>
+      {/* Main Content */}
+      <main className="grow">
+        {/* Hero Section */}
+        <Hero />
+
+        {/* Services Section */}
+        <section
+          id="services"
+          className="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant/10"
+        >
+          <div className="flex flex-col items-center text-center mb-12">
+            <span className="font-mono text-xs uppercase tracking-widest text-electric-indigo font-bold mb-3 block">
+              OUR EXPERTISE
+            </span>
+            <h2 className="text-3xl md:text-4xl font-sans font-bold text-on-surface">
+              High-Precision Services
+            </h2>
+            <div className="w-12 h-[2px] bg-electric-indigo mt-4"></div>
           </div>
 
-          <h1 className="title">Under Construction</h1>
-          
-          <p className="description">
-            Our specialized engineers are currently crafting the next generation of <strong>Corvek's</strong> web experience. We will be back shortly with next-level digital solutions.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div className="geometric-border p-8 clip-diagonal flex flex-col items-start space-y-4 rounded-sm">
+              <div className="flex items-center justify-center p-3 bg-electric-indigo/10 text-electric-indigo rounded-sm border border-electric-indigo/20">
+                <span className="material-symbols-outlined text-2xl">
+                  developer_board
+                </span>
+              </div>
+              <h3 className="font-sans text-xl font-bold text-on-surface">
+                Architecture Design
+              </h3>
+              <p className="text-sm text-on-surface-variant leading-relaxed">
+                Engineering high-performance, scalable cloud infrastructures
+                tailored to support demanding transactional systems.
+              </p>
+            </div>
 
-          <div className="social-links">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-button">
-              <svg className="button-icon" role="presentation" aria-hidden="true">
-                <use href="/icons.svg#github-icon"></use>
-              </svg>
-              <span>GitHub</span>
-            </a>
-            
-            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="social-button">
-              <svg className="button-icon" role="presentation" aria-hidden="true">
-                <use href="/icons.svg#discord-icon"></use>
-              </svg>
-              <span>Discord</span>
-            </a>
-            
-            <a href="mailto:info@corvek.com" className="social-button">
-              <svg className="button-icon" role="presentation" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              <span>Get in Touch</span>
-            </a>
+            {/* Card 2 */}
+            <div className="geometric-border p-8 clip-diagonal flex flex-col items-start space-y-4 rounded-sm">
+              <div className="flex items-center justify-center p-3 bg-electric-indigo/10 text-electric-indigo rounded-sm border border-electric-indigo/20">
+                <span className="material-symbols-outlined text-2xl">
+                  terminal
+                </span>
+              </div>
+              <h3 className="font-sans text-xl font-bold text-on-surface">
+                Agile Development
+              </h3>
+              <p className="text-sm text-on-surface-variant leading-relaxed">
+                Building custom web solutions and API integrations with modern
+                stacks, emphasizing speed, type safety, and maintainability.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="geometric-border p-8 clip-diagonal flex flex-col items-start space-y-4 rounded-sm">
+              <div className="flex items-center justify-center p-3 bg-electric-indigo/10 text-electric-indigo rounded-sm border border-electric-indigo/20">
+                <span className="material-symbols-outlined text-2xl">
+                  security
+                </span>
+              </div>
+              <h3 className="font-sans text-xl font-bold text-on-surface">
+                Security & DevSecOps
+              </h3>
+              <p className="text-sm text-on-surface-variant leading-relaxed">
+                Enforcing strict auditing guidelines, continuous threat
+                modeling, and fully automated deployment workflows.
+              </p>
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* Contact/CTA section */}
+        <section
+          id="contact"
+          className="py-20 bg-noche-purpura/20 border-t border-outline-variant/10"
+        >
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="flex flex-col items-start space-y-3">
+              <h2 className="text-2xl md:text-3xl font-sans font-bold text-on-surface">
+                Ready to elevate your IT operations?
+              </h2>
+              <p className="text-sm text-on-surface-variant max-w-xl">
+                Connect with our engineering specialists to outline a customized
+                architecture plan for your business needs.
+              </p>
+            </div>
+            <Button
+              variant="primary"
+              clipStyle="diagonal"
+              className="flex items-center gap-2"
+            >
+              <span>Let's Talk</span>
+              <span className="material-symbols-outlined text-sm font-semibold">
+                mail
+              </span>
+            </Button>
+          </div>
+        </section>
       </main>
 
-      <footer className="footer">
-        <p>© {new Date().getFullYear()} Corvek Digital Services. All rights reserved.</p>
+      {/* Footer */}
+      <footer className="border-t border-outline-variant/10 bg-background py-8">
+        <div className="mx-auto max-w-container-max px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+          <div className="flex items-center gap-2">
+            <Logo className="text-electric-indigo" size={24} />
+            <span className="font-sans text-sm font-bold text-on-surface">
+              Corvek Digital Services
+            </span>
+          </div>
+          <p className="font-mono text-xs text-on-surface-variant/70">
+            © {new Date().getFullYear()} Corvek. All rights reserved.
+          </p>
+        </div>
       </footer>
-    </>
+    </div>
   )
 }
 
 export default App
-
-
