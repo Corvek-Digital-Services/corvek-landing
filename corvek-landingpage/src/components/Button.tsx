@@ -2,35 +2,25 @@ import type { ButtonHTMLAttributes, ReactNode, FC } from 'react'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary'
-  clipStyle?: 'diagonal' | 'diagonal-reverse' | 'none'
   children: ReactNode
 }
 
 export const Button: FC<ButtonProps> = ({
   variant = 'primary',
-  clipStyle = 'none',
   children,
   className = '',
   ...props
 }) => {
-  const baseClasses = 'px-6 py-2 md:px-8 md:py-3 font-mono text-xs uppercase tracking-wider font-semibold transition-all duration-300 focus:outline-none'
+  const baseClasses = 'px-6 py-2.5 md:px-8 md:py-4 font-mono text-[11px] uppercase tracking-wider font-semibold transition-all duration-300 focus:outline-none rounded'
   
   const variantClasses =
     variant === 'primary'
-      ? 'bg-electric-indigo text-white luminescent-glow luminescent-hover hover:bg-electric-indigo/90'
-      : 'border border-electric-indigo/50 hover:border-electric-indigo text-on-surface bg-transparent hover:bg-electric-indigo/5'
-
-  const clipClassesMap = {
-    diagonal: 'clip-diagonal',
-    'diagonal-reverse': 'clip-diagonal-reverse',
-    none: 'rounded-sm',
-  }
-
-  const clipClasses = clipClassesMap[clipStyle]
+      ? 'bg-primary text-white hover:bg-primary-dark shadow-sm hover:shadow-md'
+      : 'border border-outline hover:border-primary hover:text-primary text-on-surface-variant bg-transparent'
 
   return (
     <button
-      className={`${baseClasses} ${variantClasses} ${clipClasses} ${className}`}
+      className={`${baseClasses} ${variantClasses} ${className}`}
       {...props}
     >
       {children}

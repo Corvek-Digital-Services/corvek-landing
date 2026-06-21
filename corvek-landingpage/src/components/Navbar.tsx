@@ -7,12 +7,12 @@ export const Navbar: FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-outline-variant/20 bg-background/90 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 w-full border-b border-outline/20 bg-white/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-container-max items-center justify-between px-margin-mobile py-4 md:px-margin-desktop">
         {/* Brand Logo & Name */}
         <div className="flex items-center gap-3">
-          <Logo className="text-electric-indigo" size={32} />
-          <span className="font-sans text-lg font-bold tracking-tight text-on-surface">
+          <Logo className="text-primary" size={32} />
+          <span className="font-headline text-[22px] font-bold tracking-tight text-on-surface">
             Corvek Digital
           </span>
         </div>
@@ -45,18 +45,18 @@ export const Navbar: FC = () => {
           </a>
 
           {/* Language Switcher */}
-          <div className="flex items-center gap-2 border-l border-outline-variant/40 pl-4 font-mono text-[11px]">
+          <div className="flex items-center gap-2 border-l border-outline/30 pl-4 font-mono text-[11px]">
             <button className="text-on-surface-variant hover:text-primary transition-colors">
               ES
             </button>
-            <span className="text-outline-variant/60">/</span>
-            <button className="font-bold text-electric-indigo">EN</button>
+            <span className="text-outline/50">/</span>
+            <button className="font-bold text-primary">EN</button>
           </div>
         </div>
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <Button variant="primary" clipStyle="diagonal">
+          <Button variant="primary">
             Schedule Consultation
           </Button>
         </div>
@@ -75,7 +75,7 @@ export const Navbar: FC = () => {
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full border-b border-outline-variant/20 bg-background/95 px-margin-mobile py-6 backdrop-blur-md md:hidden animate-in fade-in slide-in-from-top-5 duration-200">
+        <div className="absolute top-full left-0 w-full border-b border-outline/20 bg-white/95 px-margin-mobile py-6 backdrop-blur-md md:hidden animate-in fade-in slide-in-from-top-5 duration-200">
           <div className="flex flex-col gap-6">
             <a
               href="#services"
@@ -106,18 +106,17 @@ export const Navbar: FC = () => {
               Contact
             </a>
 
-            <div className="flex items-center gap-3 font-mono text-[13px] border-t border-outline-variant/20 pt-4">
+            <div className="flex items-center gap-3 font-mono text-[13px] border-t border-outline/20 pt-4">
               <span className="text-on-surface-variant">Language:</span>
               <button className="text-on-surface-variant hover:text-primary transition-colors">
                 ES
               </button>
-              <span className="text-outline-variant/40">/</span>
-              <button className="font-bold text-electric-indigo">EN</button>
+              <span className="text-outline/40">/</span>
+              <button className="font-bold text-primary">EN</button>
             </div>
 
             <Button
               variant="primary"
-              clipStyle="diagonal"
               className="w-full mt-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
