@@ -1,5 +1,6 @@
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Icon } from './Icon'
 
 export const Services: FC = () => {
   const { t } = useTranslation()
@@ -29,9 +30,7 @@ export const Services: FC = () => {
           <div className="md:col-span-8 bg-white rounded-xl p-10 border border-outline/10 shadow-clean flex flex-col justify-between group">
             <div>
               <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-8 text-primary">
-                <span className="material-symbols-outlined text-3xl icon-filled" aria-hidden="true">
-                  cloud_sync
-                </span>
+                <Icon name="cloud_sync" size={32} filled />
               </div>
               <h3 className="text-2xl md:text-3xl font-headline text-on-surface mb-4 font-bold">
                 {t('common.services.cloud.title')}
@@ -42,7 +41,7 @@ export const Services: FC = () => {
             </div>
             <div className="mt-8">
               <a
-                className="inline-flex items-center text-primary-dark font-mono text-[11px] font-bold tracking-wider hover:gap-3 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1"
+                className="inline-flex items-center text-primary-text font-mono text-[11px] font-bold tracking-wider hover:gap-3 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1"
                 href="#contact"
                 onClick={(e) => {
                   e.preventDefault()
@@ -50,9 +49,7 @@ export const Services: FC = () => {
                 }}
               >
                 {t('common.services.cloud.cta')}{' '}
-                <span className="material-symbols-outlined ml-1 text-sm transition-transform group-hover:translate-x-1" aria-hidden="true">
-                  arrow_forward
-                </span>
+                <Icon name="arrow_forward" size={20} className="ml-1 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
           </div>
@@ -61,9 +58,7 @@ export const Services: FC = () => {
           <div className="md:col-span-4 bg-white rounded-xl p-10 border border-outline/10 shadow-clean flex flex-col justify-between group">
             <div>
               <div className="w-14 h-14 bg-primary-dark/10 rounded-lg flex items-center justify-center mb-8 text-primary-dark">
-                <span className="material-symbols-outlined text-3xl icon-filled" aria-hidden="true">
-                  security
-                </span>
+                <Icon name="security" size={32} filled />
               </div>
               <h3 className="text-xl md:text-2xl font-headline text-on-surface mb-4 font-bold">
                 {t('common.services.security.title')}
@@ -74,7 +69,7 @@ export const Services: FC = () => {
             </div>
             <div className="mt-8">
               <a
-                className="inline-flex items-center text-primary-dark font-mono text-[11px] font-bold tracking-wider hover:gap-3 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1"
+                className="inline-flex items-center text-primary-text font-mono text-[11px] font-bold tracking-wider hover:gap-3 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1"
                 href="#contact"
                 onClick={(e) => {
                   e.preventDefault()
@@ -82,9 +77,7 @@ export const Services: FC = () => {
                 }}
               >
                 {t('common.services.security.cta')}{' '}
-                <span className="material-symbols-outlined ml-1 text-sm transition-transform group-hover:translate-x-1" aria-hidden="true">
-                  arrow_forward
-                </span>
+                <Icon name="arrow_forward" size={20} className="ml-1 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
           </div>
@@ -93,9 +86,7 @@ export const Services: FC = () => {
           <div className="md:col-span-12 bg-white rounded-xl p-10 border border-outline/10 shadow-clean flex flex-col md:flex-row justify-between items-center group gap-8">
             <div className="md:w-2/3">
               <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-8 text-primary">
-                <span className="material-symbols-outlined text-3xl icon-filled" aria-hidden="true">
-                  code_blocks
-                </span>
+                <Icon name="code_blocks" size={32} filled />
               </div>
               <h3 className="text-2xl md:text-3xl font-headline text-on-surface mb-4 font-bold">
                 {t('common.services.software.title')}
@@ -114,9 +105,7 @@ export const Services: FC = () => {
                 }}
               >
                 {t('common.services.software.cta')}{' '}
-                <span className="material-symbols-outlined text-sm" aria-hidden="true">
-                  terminal
-                </span>
+                <Icon name="terminal" size={20} />
               </a>
             </div>
           </div>

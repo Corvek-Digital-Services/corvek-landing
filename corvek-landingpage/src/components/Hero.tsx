@@ -2,6 +2,7 @@ import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button } from './Button'
 import { Logo } from './Logo'
+import { Icon } from './Icon'
 
 function scrollToSection(id: string) {
   const el = document.getElementById(id)
@@ -22,7 +23,7 @@ export const Hero: FC = () => {
         {/* Left column: Badge, Heading, and CTAs */}
         <div className="md:col-span-7 flex flex-col items-start space-y-stack-md">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-1.5 border border-primary/20 rounded-full bg-primary/5 text-primary-dark font-mono text-[11px] font-semibold tracking-wider">
+          <div className="inline-flex items-center px-4 py-1.5 border border-primary/20 rounded-full bg-primary/5 text-primary-text font-mono text-[11px] font-semibold tracking-wider">
             <span className="w-2 h-2 rounded-full bg-primary mr-2" aria-hidden="true" />{t('common.hero.badge')}
           </div>
 
@@ -46,9 +47,7 @@ export const Hero: FC = () => {
               onClick={() => scrollToSection('contact')}
             >
               <span>{t('common.hero.ctaPrimary')}</span>
-              <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" aria-hidden="true">
-                arrow_forward
-              </span>
+              <Icon name="arrow_forward" size={20} className="group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               variant="secondary"

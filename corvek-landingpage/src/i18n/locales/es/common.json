@@ -56,6 +56,25 @@
         "subtitle": "NUESTRO ESTÁNDAR CENTRAL"
       }
     },
+    "solutions": {
+      "title": "Soluciones por Industria",
+      "subtitle": "Enfoques personalizados para tu sector.",
+      "migration": {
+        "title": "Migración Cloud",
+        "description": "Transición sin interrupciones de tu infraestructura a la nube con cero tiempo de inactividad y gestión optimizada de costos.",
+        "cta": "INICIAR MIGRACIÓN"
+      },
+      "audit": {
+        "title": "Auditoría de Seguridad",
+        "description": "Evaluación integral de vulnerabilidades y pruebas de penetración para identificar y neutralizar amenazas antes de que ataquen.",
+        "cta": "AUDITAR AHORA"
+      },
+      "development": {
+        "title": "Desarrollo a Medida",
+        "description": "Soluciones de software diseñadas desde cero para coincidir exactamente con tus requisitos y flujos de trabajo empresariales.",
+        "cta": "CONSTRUYE CON NOSOTROS"
+      }
+    },
     "contact": {
       "title": "Inicia la Transformación",
       "description": "Agenda una consulta técnica estratégica con nuestros arquitectos líderes hoy.",

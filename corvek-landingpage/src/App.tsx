@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { Services } from './components/Services'
+import { Solutions } from './components/Solutions'
 import { Values } from './components/Values'
 import { ContactForm } from './components/ContactForm'
 import { Footer } from './components/Footer'
@@ -33,6 +34,9 @@ function App() {
 
           {/* Services Section */}
           <Services />
+
+          {/* Solutions Section */}
+          <Solutions />
 
           {/* Values Section */}
           <Values />

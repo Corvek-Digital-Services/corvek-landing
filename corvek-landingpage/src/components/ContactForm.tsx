@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback } from 'react'
 import type { FC, FormEvent } from 'react'
 import { useTranslation, Trans } from 'react-i18next'
+import { Icon } from './Icon'
 
 const INTEREST_LABELS: Record<string, string> = {
   cloud: 'common.contact.interestOptions.cloud',
@@ -57,7 +58,6 @@ export const ContactForm: FC = () => {
         successRef.current?.focus()
       }, 100)
     } else {
-      // Focus first invalid field
       const firstErrorField = formRef.current?.querySelector('[aria-invalid="true"]') as HTMLElement
       firstErrorField?.focus()
     }
@@ -113,9 +113,7 @@ export const ContactForm: FC = () => {
             aria-live="polite"
             className="relative z-10 py-12 text-center flex flex-col items-center space-y-4 outline-none"
           >
-            <span className="material-symbols-outlined text-7xl text-primary" aria-hidden="true">
-              task_alt
-            </span>
+            <Icon name="task_alt" size={56} className="text-primary" />
             <h3 className="text-2xl font-headline font-bold text-on-surface">
               {t('common.contact.thankYou', { name })}
             </h3>
@@ -158,7 +156,7 @@ export const ContactForm: FC = () => {
                 />
                 {touched.name && errors.name && (
                   <p id="name-error" role="alert" className="text-red-600 text-xs mt-1 flex items-center gap-1">
-                    <span className="material-symbols-outlined text-sm" aria-hidden="true">error</span>
+                    <Icon name="error" size={16} className="text-red-600" />
                     {errors.name}
                   </p>
                 )}
@@ -184,10 +182,10 @@ export const ContactForm: FC = () => {
                   aria-describedby={errors.email ? 'email-error' : 'email-hint'}
                   className="w-full bg-transparent border-0 border-b-2 border-outline/50 focus:border-primary focus:ring-0 text-on-surface px-0 py-3 transition-all duration-200 placeholder:text-outline/70 focus:outline-none focus-visible:border-primary"
                 />
-                <p id="email-hint" className="text-outline text-xs">{t('common.contact.emailHint')}</p>
+                <p id="email-hint" className="text-outline-text text-xs">{t('common.contact.emailHint')}</p>
                 {touched.email && errors.email && (
                   <p id="email-error" role="alert" className="text-red-600 text-xs mt-1 flex items-center gap-1">
-                    <span className="material-symbols-outlined text-sm" aria-hidden="true">error</span>
+                    <Icon name="error" size={16} className="text-red-600" />
                     {errors.email}
                   </p>
                 )}
@@ -219,13 +217,11 @@ export const ContactForm: FC = () => {
                     </option>
                   ))}
                 </select>
-                <span className="material-symbols-outlined absolute right-0 top-3 text-on-surface-variant pointer-events-none" aria-hidden="true">
-                  expand_more
-                </span>
+                <Icon name="expand_more" size={24} className="absolute right-0 top-3 text-on-surface-variant pointer-events-none" />
               </div>
               {touched.interest && errors.interest && (
                 <p id="interest-error" role="alert" className="text-red-600 text-xs mt-1 flex items-center gap-1">
-                  <span className="material-symbols-outlined text-sm" aria-hidden="true">error</span>
+                  <Icon name="error" size={16} className="text-red-600" />
                   {errors.interest}
                 </p>
               )}
@@ -235,11 +231,11 @@ export const ContactForm: FC = () => {
             <div className="pt-8 text-center">
               <button
                 type="submit"
-                className="w-full md:w-auto min-w-[240px] bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded font-mono text-[12px] font-bold tracking-wider transition-all shadow-lg text-lg uppercase cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                className="w-full md:w-auto min-w-[240px] bg-primary-text hover:bg-primary-dark text-white px-10 py-5 rounded font-mono text-[12px] font-bold tracking-wider transition-all shadow-lg text-lg uppercase cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
                 {t('common.contact.submit')}
               </button>
-              <p className="mt-4 text-outline/70 text-xs">
+              <p className="mt-4 text-outline-text text-xs">
                 {t('common.contact.responseNote')}
               </p>
             </div>

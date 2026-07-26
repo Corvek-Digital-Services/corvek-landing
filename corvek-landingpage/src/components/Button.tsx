@@ -15,7 +15,7 @@ export const Button: FC<ButtonProps> = ({
   
   const variantClasses =
     variant === 'primary'
-      ? 'bg-primary text-white hover:bg-primary-dark shadow-sm hover:shadow-md'
+      ? 'bg-primary-text text-white hover:bg-primary-dark shadow-sm hover:shadow-md'
       : 'border border-outline hover:border-primary hover:text-primary text-on-surface-variant bg-transparent'
 
   return (

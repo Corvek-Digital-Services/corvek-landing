@@ -3,6 +3,7 @@ import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Logo } from './Logo'
 import { Button } from './Button'
+import { Icon } from './Icon'
 
 function scrollToSection(id: string) {
   const el = document.getElementById(id)
@@ -118,7 +119,7 @@ export const Navbar: FC = () => {
                 e.preventDefault()
                 scrollToSection(link.href.slice(1))
               }}
-              className="font-mono text-[11px] font-semibold uppercase tracking-wider text-on-surface-variant transition-colors duration-300 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+              className="font-mono text-[11px] font-semibold uppercase tracking-wider text-on-surface-variant transition-colors duration-300 hover:text-primary-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
             >
               {link.label}
             </a>
@@ -134,7 +135,7 @@ export const Navbar: FC = () => {
               type="button"
               aria-pressed={currentLang === 'es'}
               onClick={() => switchLanguage('es')}
-              className={`transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1 ${currentLang === 'es' ? 'font-bold text-primary' : 'text-on-surface-variant hover:text-primary'}`}
+              className={`transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1 ${currentLang === 'es' ? 'font-bold text-primary-text' : 'text-on-surface-variant hover:text-primary-text'}`}
             >
               ES
             </button>
@@ -143,7 +144,7 @@ export const Navbar: FC = () => {
               type="button"
               aria-pressed={currentLang === 'en'}
               onClick={() => switchLanguage('en')}
-              className={`transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1 ${currentLang === 'en' ? 'font-bold text-primary' : 'text-on-surface-variant hover:text-primary'}`}
+              className={`transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1 ${currentLang === 'en' ? 'font-bold text-primary-text' : 'text-on-surface-variant hover:text-primary-text'}`}
             >
               EN
             </button>
@@ -167,9 +168,7 @@ export const Navbar: FC = () => {
           aria-expanded={isMobileMenuOpen}
           aria-controls="mobile-menu"
         >
-          <span className="material-symbols-outlined text-2xl" aria-hidden="true">
-            {isMobileMenuOpen ? 'close' : 'menu'}
-          </span>
+          <Icon name={isMobileMenuOpen ? 'close' : 'menu'} size={24} />
         </button>
       </div>
 
@@ -205,7 +204,7 @@ export const Navbar: FC = () => {
                 type="button"
                 aria-pressed={currentLang === 'es'}
                 onClick={() => switchLanguage('es')}
-                className={`transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1 py-0.5 ${currentLang === 'es' ? 'font-bold text-primary' : 'text-on-surface-variant hover:text-primary'}`}
+                className={`transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1 py-0.5 ${currentLang === 'es' ? 'font-bold text-primary-text' : 'text-on-surface-variant hover:text-primary-text'}`}
               >
                 ES
               </button>
@@ -214,7 +213,7 @@ export const Navbar: FC = () => {
                 type="button"
                 aria-pressed={currentLang === 'en'}
                 onClick={() => switchLanguage('en')}
-                className={`transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1 py-0.5 ${currentLang === 'en' ? 'font-bold text-primary' : 'text-on-surface-variant hover:text-primary'}`}
+                className={`transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1 py-0.5 ${currentLang === 'en' ? 'font-bold text-primary-text' : 'text-on-surface-variant hover:text-primary-text'}`}
               >
                 EN
               </button>

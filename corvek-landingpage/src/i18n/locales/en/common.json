@@ -56,6 +56,25 @@
         "subtitle": "OUR CORE STANDARD"
       }
     },
+    "solutions": {
+      "title": "Industry Solutions",
+      "subtitle": "Tailored approaches for your sector.",
+      "migration": {
+        "title": "Cloud Migration",
+        "description": "Seamless transition of your infrastructure to the cloud with zero downtime and optimized cost management.",
+        "cta": "START MIGRATION"
+      },
+      "audit": {
+        "title": "Security Audit",
+        "description": "Comprehensive vulnerability assessment and penetration testing to identify and neutralize threats before they strike.",
+        "cta": "AUDIT NOW"
+      },
+      "development": {
+        "title": "Custom Development",
+        "description": "Bespoke software solutions engineered from the ground up to match your exact business requirements and workflows.",
+        "cta": "BUILD WITH US"
+      }
+    },
     "contact": {
       "title": "Start the Transformation",
       "description": "Schedule a strategic technical consultation with our lead architects today.",

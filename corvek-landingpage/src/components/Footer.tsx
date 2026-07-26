@@ -25,7 +25,7 @@ export const Footer: FC = () => {
             <p className="text-sm text-on-surface-variant max-w-sm mb-6 leading-relaxed">
               {t('common.footer.description')}
             </p>
-            <div className="font-mono text-[11px] font-semibold text-outline text-xs">
+            <div className="font-mono text-[11px] font-semibold text-outline-text text-xs">
               &copy; {new Date().getFullYear()} {t('common.footer.copyright', { year: new Date().getFullYear() }).replace(`${new Date().getFullYear()} `, '')}
             </div>
           </div>

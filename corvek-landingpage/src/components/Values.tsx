@@ -1,5 +1,6 @@
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Icon } from './Icon'
 
 export const Values: FC = () => {
   const { t } = useTranslation()
@@ -23,14 +24,12 @@ export const Values: FC = () => {
               {/* Item 1 */}
               <div className="flex items-start gap-6">
                 <div className="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary-dark">
-                  <span className="material-symbols-outlined font-bold" aria-hidden="true">
-                    check_circle
-                  </span>
+                  <Icon name="check_circle" size={24} />
                 </div>
                 <div>
-                  <h4 className="text-lg font-headline text-on-surface mb-1 font-bold">
+                  <h3 className="text-lg font-headline text-on-surface mb-1 font-bold">
                     {t('common.values.pragmatic.title')}
-                  </h4>
+                  </h3>
                   <p className="text-sm text-on-surface-variant">
                     {t('common.values.pragmatic.description')}
                   </p>
@@ -40,14 +39,12 @@ export const Values: FC = () => {
               {/* Item 2 */}
               <div className="flex items-start gap-6">
                 <div className="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary-dark">
-                  <span className="material-symbols-outlined font-bold" aria-hidden="true">
-                    architecture
-                  </span>
+                  <Icon name="architecture" size={24} />
                 </div>
                 <div>
-                  <h4 className="text-lg font-headline text-on-surface mb-1 font-bold">
+                  <h3 className="text-lg font-headline text-on-surface mb-1 font-bold">
                     {t('common.values.mastery.title')}
-                  </h4>
+                  </h3>
                   <p className="text-sm text-on-surface-variant">
                     {t('common.values.mastery.description')}
                   </p>
@@ -60,9 +57,7 @@ export const Values: FC = () => {
           <div className="relative">
             <div className="aspect-square bg-surface-container rounded-3xl flex flex-col items-center justify-center p-16 border border-outline/10 shadow-clean">
               <div className="text-center">
-                <span className="material-symbols-outlined text-7xl text-primary mb-6 icon-filled" aria-hidden="true">
-                  precision_manufacturing
-                </span>
+                <Icon name="precision_manufacturing" size={56} className="text-primary mb-6" filled />
                 <h3 className="text-2xl font-headline text-on-surface font-bold">
                   {t('common.values.precision.title')}
                 </h3>

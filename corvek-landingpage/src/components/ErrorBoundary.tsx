@@ -1,4 +1,5 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react'
+import { Icon } from './Icon'
 
 interface Props {
   children: ReactNode
@@ -31,9 +32,7 @@ export class ErrorBoundary extends Component<Props, State> {
           className="min-h-screen flex items-center justify-center bg-background p-8"
         >
           <div className="text-center max-w-md">
-            <span className="material-symbols-outlined text-6xl text-primary mb-4" aria-hidden="true">
-              error_outline
-            </span>
+            <Icon name="error_outline" size={48} className="text-primary mb-4" />
             <h1 className="text-2xl font-headline font-bold text-on-surface mb-2">
               Something went wrong
             </h1>
