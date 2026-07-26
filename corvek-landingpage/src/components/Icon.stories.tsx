@@ -15,10 +15,6 @@ const meta: Meta<typeof Icon> = {
       control: { type: 'number', min: 12, max: 96, step: 4 },
       description: 'The size of the icon in pixels',
     },
-    filled: {
-      control: 'boolean',
-      description: 'Whether the icon should be filled',
-    },
   },
   parameters: {
     a11y: {
@@ -47,19 +43,10 @@ export const AllIcons: StoryObj = {
   ),
 }
 
-export const Filled: Story = {
+export const Large: Story = {
   args: {
     name: 'cloud_sync',
     size: 48,
-    filled: true,
-  },
-}
-
-export const Outlined: Story = {
-  args: {
-    name: 'cloud_sync',
-    size: 48,
-    filled: false,
   },
 }
 

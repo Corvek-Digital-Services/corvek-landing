@@ -13,7 +13,7 @@ const SolutionCard: FC<SolutionCardProps> = ({ icon, title, description, cta }) 
   <div className="bg-white rounded-xl p-8 border border-outline/10 shadow-clean flex flex-col justify-between group">
     <div>
       <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary">
-        <Icon name={icon} size={28} filled />
+        <Icon name={icon} size={28} />
       </div>
       <h3 className="text-xl font-headline text-on-surface mb-3 font-bold">
         {title}

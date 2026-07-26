@@ -19,44 +19,117 @@ interface IconProps {
   name: IconName
   size?: number
   className?: string
-  filled?: boolean
 }
 
-const paths: Record<IconName, string> = {
-  arrow_forward: 'M5 12h14m-7-7 7 7-7 7',
-  check_circle: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
-  architecture: 'M12 2L2 7l2 1v9l8 3 8-3V8l2-1L12 2zm0 2.5L18.5 7 12 9.5 5.5 7 12 4.5zM4 9.5l7 3v7l-7-3v-7zm9 10v-7l7-3v7l-7 3z',
-  cloud_sync: 'M7 16a5 5 0 01-.66-9.96A7 7 0 0119.34 8.5 5 5 0 0117 17.5H7zm7.5-1.5a2 2 0 100-4 2 2 0 000 4zm1-4l-2 2-2-2 1.5-1.5L16 12l-1.5 1.5L15.5 10.5z',
-  code_blocks: 'M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z',
-  terminal: 'M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zM7.5 15l-1-1L9 11.5 6.5 9l1-1 3.5 3.5a1 1 0 010 1.4L7.5 15zm9 0h-5v-2h5v2z',
-  menu: 'M3 6h18M3 12h18M3 18h18',
-  close: 'M6 6l12 12M18 6L6 18',
-  error: 'M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z',
-  task_alt: 'M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z',
-  expand_more: 'M6 9l6 6 6-6',
-  error_outline: 'M11 15h2v2h-2v-2zm0-8h2v6h-2V7zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z',
-  rocket_launch: 'M11.59 7.41 15.17 3h-1.58a11.18 11.18 0 0 0-7.92 3.27A11.18 11.18 0 0 0 2 14.41V16h2.82a11.18 11.18 0 0 0 3.27-7.92L6.82 6.41l4.77 1zM7.41 11.59 2 12l1-5.41 4.41 5zM15 17l-1.41-1.41L12.17 17l1.42 1.41L15 17z',
+const icons: Record<IconName, FC> = {
+  arrow_forward: () => (
+    <>
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </>
+  ),
+  check_circle: () => (
+    <>
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+      <path d="m9 11 3 3L22 4" />
+    </>
+  ),
+  architecture: () => (
+    <>
+      <path d="M3 21h18" />
+      <path d="M5 21V7l7-4 7 4v14" />
+      <path d="M9 21v-6h6v6" />
+      <path d="M10 9h4" />
+      <path d="M10 13h4" />
+    </>
+  ),
+  cloud_sync: () => (
+    <>
+      <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+      <path d="m12 14 2 2-2 2" />
+      <path d="m16 14 2 2-2 2" />
+      <path d="m12 10-2-2 2-2" />
+      <path d="m8 10-2-2 2-2" />
+    </>
+  ),
+  code_blocks: () => (
+    <>
+      <path d="m16 18 6-6-6-6" />
+      <path d="m8 6-6 6 6 6" />
+    </>
+  ),
+  terminal: () => (
+    <>
+      <path d="m7 11 2-2-2-2" />
+      <path d="M11 13h4" />
+      <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+    </>
+  ),
+  menu: () => (
+    <>
+      <path d="M4 12h16" />
+      <path d="M4 6h16" />
+      <path d="M4 18h16" />
+    </>
+  ),
+  close: () => (
+    <>
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+    </>
+  ),
+  error: () => (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 8v4" />
+      <path d="M12 16h.01" />
+    </>
+  ),
+  task_alt: () => (
+    <>
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+      <path d="m9 11 3 3L22 4" />
+    </>
+  ),
+  expand_more: () => (
+    <path d="m6 9 6 6 6-6" />
+  ),
+  error_outline: () => (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 8v4" />
+      <path d="M12 16h.01" />
+    </>
+  ),
+  rocket_launch: () => (
+    <>
+      <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+      <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+    </>
+  ),
 }
 
-export const Icon: FC<IconProps> = ({ name, size = 24, className = '', filled = false }) => {
-  const path = paths[name]
-  if (!path) return null
+export const Icon: FC<IconProps> = ({ name, size = 24, className = '' }) => {
+  const IconComponent = icons[name]
+  if (!IconComponent) return null
 
   return (
     <svg
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      fill={filled ? 'currentColor' : 'none'}
-      stroke={filled ? 'none' : 'currentColor'}
-      strokeWidth={filled ? 0 : 2}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
       aria-hidden="true"
       focusable="false"
     >
-      <path d={path} />
+      <IconComponent />
     </svg>
   )
 }

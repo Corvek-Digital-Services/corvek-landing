@@ -30,7 +30,7 @@ export const Services: FC = () => {
           <div className="md:col-span-8 bg-white rounded-xl p-10 border border-outline/10 shadow-clean flex flex-col justify-between group">
             <div>
               <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-8 text-primary">
-                <Icon name="cloud_sync" size={32} filled />
+                <Icon name="cloud_sync" size={32} />
               </div>
               <h3 className="text-2xl md:text-3xl font-headline text-on-surface mb-4 font-bold">
                 {t('common.services.cloud.title')}
@@ -58,7 +58,7 @@ export const Services: FC = () => {
           <div className="md:col-span-4 bg-white rounded-xl p-10 border border-outline/10 shadow-clean flex flex-col justify-between group">
             <div>
               <div className="w-14 h-14 bg-primary-dark/10 rounded-lg flex items-center justify-center mb-8 text-primary-dark">
-                <Icon name="rocket_launch" size={32} filled />
+                <Icon name="rocket_launch" size={32} />
               </div>
               <h3 className="text-xl md:text-2xl font-headline text-on-surface mb-4 font-bold">
                 {t('common.services.platforms.title')}
@@ -86,7 +86,7 @@ export const Services: FC = () => {
           <div className="md:col-span-12 bg-white rounded-xl p-10 border border-outline/10 shadow-clean flex flex-col md:flex-row justify-between items-center group gap-8">
             <div className="md:w-2/3">
               <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-8 text-primary">
-                <Icon name="code_blocks" size={32} filled />
+                <Icon name="code_blocks" size={32} />
               </div>
               <h3 className="text-2xl md:text-3xl font-headline text-on-surface mb-4 font-bold">
                 {t('common.services.software.title')}
