@@ -1,0 +1,99 @@
+{
+  "common": {
+    "skipToContent": "Saltar al contenido principal",
+    "nav": {
+      "brand": "Corvek Digital",
+      "services": "Servicios",
+      "solutions": "Soluciones",
+      "about": "Nosotros",
+      "contact": "Contacto",
+      "scheduleConsultation": "Agendar Consulta",
+      "languageLabel": "Idioma",
+      "toggleMenu": "Abrir menú",
+      "mobileMenuLabel": "Menú principal"
+    },
+    "hero": {
+      "badge": "CONSULTORÍA IT DE ÉLITE",
+      "title": "Ingenio Digital.",
+      "subtitle": "Inteligencia que Evoluciona.",
+      "description": "Soluciones de consultoría IT de alta precisión, inspiradas en la agilidad y el uso estratégico de herramientas para transformar tu negocio en una potencia digital.",
+      "ctaPrimary": "Agendar Consulta Estratégica",
+      "ctaSecondary": "Explorar Servicios",
+      "logoAlt": "Logo Geométrico Corvek Digital"
+    },
+    "services": {
+      "title": "Arquitectura de Precisión",
+      "subtitle": "Enfoque metódico para desafíos tecnológicos complejos.",
+      "cloud": {
+        "title": "Arquitectura Cloud",
+        "description": "Escalado inteligente e infraestructuras resilientes diseñadas para alta disponibilidad y rendimiento óptimo en entornos globales.",
+        "cta": "EXPLORAR SOLUCIONES"
+      },
+      "security": {
+        "title": "Ciberseguridad",
+        "description": "Protección proactiva de activos y arquitecturas Zero Trust para proteger tu inteligencia de negocio más valiosa.",
+        "cta": "PROTEGER ACTIVOS"
+      },
+      "software": {
+        "title": "Ingeniería de Software",
+        "description": "Código robusto y artesanal. Desarrollo de sistemas complejos con patrones de diseño avanzados y aseguramiento de calidad riguroso.",
+        "cta": "VER METODOLOGÍA"
+      }
+    },
+    "values": {
+      "title": "El Factor Corvek",
+      "description": "Nuestra filosofía se basa en inteligencia pragmática, resolución de problemas complejos y dominio técnico. No solo implementamos tecnología; orquestamos soluciones que generan valor real.",
+      "pragmatic": {
+        "title": "Inteligencia Pragmática",
+        "description": "Soluciones viables y escalables, no solo teóricas que lucen bien en papel."
+      },
+      "mastery": {
+        "title": "Dominio Técnico",
+        "description": "Excelencia en cada línea de código y nodo de infraestructura que tocamos."
+      },
+      "precision": {
+        "title": "Precisión Absoluta",
+        "subtitle": "NUESTRO ESTÁNDAR CENTRAL"
+      }
+    },
+    "contact": {
+      "title": "Inicia la Transformación",
+      "description": "Agenda una consulta técnica estratégica con nuestros arquitectos líderes hoy.",
+      "nameLabel": "NOMBRE COMPLETO",
+      "namePlaceholder": "Juan Pérez",
+      "emailLabel": "CORREO CORPORATIVO",
+      "emailPlaceholder": "juan@empresa.com",
+      "emailHint": "Formato: nombre@empresa.com",
+      "interestLabel": "ÁREA DE INTERÉS",
+      "interestPlaceholder": "Selecciona una opción",
+      "interestOptions": {
+        "cloud": "Arquitectura Cloud",
+        "security": "Ciberseguridad",
+        "software": "Ingeniería de Software"
+      },
+      "submit": "SOLICITAR CONTACTO",
+      "responseNote": "Respuesta garantizada en 24 horas hábiles.",
+      "thankYou": "¡Gracias, {{name}}!",
+      "successMessage": "Tu solicitud sobre <strong>{{interest}}</strong> ha sido recibida exitosamente. Un arquitecto líder te contactará en 24 horas hábiles.",
+      "sendAnother": "Enviar otro mensaje",
+      "errors": {
+        "nameRequired": "Por favor ingresa tu nombre completo.",
+        "emailRequired": "Por favor ingresa tu correo electrónico.",
+        "emailInvalid": "Por favor ingresa un correo electrónico válido.",
+        "interestRequired": "Por favor selecciona un área de interés."
+      }
+    },
+    "footer": {
+      "description": "Excelencia IT arquitectónica para la empresa moderna. Cerrando la brecha entre ingeniería compleja y objetivos estratégicos de negocio.",
+      "copyright": "{{year}} Corvek Digital Services.",
+      "solutions": "SOLUCIONES",
+      "company": "EMPRESA",
+      "legal": "LEGAL",
+      "aboutUs": "Nosotros",
+      "consultancy": "Consultoría",
+      "privacyPolicy": "Política de Privacidad",
+      "termsOfService": "Términos de Servicio",
+      "comingSoon": "Próximamente"
+    }
+  }
+}

@@ -14,7 +14,10 @@ export const Logo: FC<LogoProps> = ({ className = '', size = 32 }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      role="img"
+      aria-label="Corvek Digital logo"
     >
+      <title>Corvek Digital</title>
       <path
         d="M20 50 L40 30 L60 35 L80 20 L75 50 L85 70 L55 60 L40 85 Z"
         fill="var(--color-primary)"

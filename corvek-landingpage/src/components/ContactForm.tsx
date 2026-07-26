@@ -1,22 +1,65 @@
-import { useState } from 'react'
-import type { FC, SubmitEvent } from 'react'
+import { useState, useRef, useCallback } from 'react'
+import type { FC, FormEvent } from 'react'
+import { useTranslation, Trans } from 'react-i18next'
 
 const INTEREST_LABELS: Record<string, string> = {
-  cloud: 'Cloud Architecture',
-  security: 'Cybersecurity',
-  software: 'Software Engineering',
+  cloud: 'common.contact.interestOptions.cloud',
+  security: 'common.contact.interestOptions.security',
+  software: 'common.contact.interestOptions.software',
+}
+
+interface FormErrors {
+  name?: string
+  email?: string
+  interest?: string
+}
+
+function validateEmail(email: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
 
 export const ContactForm: FC = () => {
+  const { t } = useTranslation()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [interest, setInterest] = useState('')
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [errors, setErrors] = useState<FormErrors>({})
+  const [touched, setTouched] = useState<Record<string, boolean>>({})
+  const formRef = useRef<HTMLFormElement>(null)
+  const successRef = useRef<HTMLDivElement>(null)
 
-  const handleSubmit = (e: SubmitEvent<HTMLFormElement>) => {
+  const validate = useCallback((): FormErrors => {
+    const newErrors: FormErrors = {}
+    if (!name.trim()) {
+      newErrors.name = t('common.contact.errors.nameRequired')
+    }
+    if (!email.trim()) {
+      newErrors.email = t('common.contact.errors.emailRequired')
+    } else if (!validateEmail(email)) {
+      newErrors.email = t('common.contact.errors.emailInvalid')
+    }
+    if (!interest) {
+      newErrors.interest = t('common.contact.errors.interestRequired')
+    }
+    return newErrors
+  }, [name, email, interest, t])
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (name.trim() && email.trim() && interest) {
+    const newErrors = validate()
+    setErrors(newErrors)
+    setTouched({ name: true, email: true, interest: true })
+
+    if (Object.keys(newErrors).length === 0) {
       setIsSubmitted(true)
+      setTimeout(() => {
+        successRef.current?.focus()
+      }, 100)
+    } else {
+      // Focus first invalid field
+      const firstErrorField = formRef.current?.querySelector('[aria-invalid="true"]') as HTMLElement
+      firstErrorField?.focus()
     }
   }
 
@@ -25,7 +68,24 @@ export const ContactForm: FC = () => {
     setEmail('')
     setInterest('')
     setIsSubmitted(false)
+    setErrors({})
+    setTouched({})
   }
+
+  const handleBlur = (field: string) => {
+    setTouched((prev) => ({ ...prev, [field]: true }))
+    const newErrors = validate()
+    setErrors((prev) => ({
+      ...prev,
+      [field]: newErrors[field as keyof FormErrors],
+    }))
+  }
+
+  const interestOptions = [
+    { value: 'cloud', label: t('common.contact.interestOptions.cloud') },
+    { value: 'security', label: t('common.contact.interestOptions.security') },
+    { value: 'software', label: t('common.contact.interestOptions.software') },
+  ]
 
   return (
     <section
@@ -34,37 +94,47 @@ export const ContactForm: FC = () => {
     >
       <div className="max-w-4xl mx-auto bg-white rounded-2xl p-10 md:p-16 border border-outline/10 shadow-clean relative overflow-hidden">
         {/* Background design dot */}
-        <div className="absolute top-0 right-0 w-48 h-48 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute top-0 right-0 w-48 h-48 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2" aria-hidden="true"></div>
 
         <div className="relative z-10 text-center mb-12">
           <h2 className="text-3xl md:text-[40px] font-headline text-on-surface mb-4 font-bold">
-            Start the Transformation
+            {t('common.contact.title')}
           </h2>
           <p className="text-base md:text-lg text-on-surface-variant max-w-lg mx-auto">
-            Schedule a strategic technical consultation with our lead architects today.
+            {t('common.contact.description')}
           </p>
         </div>
 
         {isSubmitted ? (
-          <div className="relative z-10 py-12 text-center flex flex-col items-center space-y-4 animate-in fade-in duration-300">
-            <span className="material-symbols-outlined text-7xl text-primary animate-bounce">
+          <div
+            ref={successRef}
+            tabIndex={-1}
+            role="status"
+            aria-live="polite"
+            className="relative z-10 py-12 text-center flex flex-col items-center space-y-4 outline-none"
+          >
+            <span className="material-symbols-outlined text-7xl text-primary" aria-hidden="true">
               task_alt
             </span>
             <h3 className="text-2xl font-headline font-bold text-on-surface">
-              Thank You, {name}!
+              {t('common.contact.thankYou', { name })}
             </h3>
             <p className="text-on-surface-variant max-w-md mx-auto text-sm leading-relaxed">
-              Your request regarding <strong>{INTEREST_LABELS[interest] || ''}</strong> has been received successfully. A lead architect will contact you within 24 business hours.
+              <Trans
+                i18nKey="common.contact.successMessage"
+                values={{ interest: t(INTEREST_LABELS[interest] || '') }}
+                components={{ strong: <strong /> }}
+              />
             </p>
             <button
               onClick={handleReset}
-              className="mt-6 text-primary hover:text-primary-dark font-mono text-[11px] font-bold tracking-wider uppercase border border-primary/20 hover:border-primary/50 px-6 py-2.5 rounded transition-all"
+              className="mt-6 text-primary hover:text-primary-dark font-mono text-[11px] font-bold tracking-wider uppercase border border-primary/20 hover:border-primary/50 px-6 py-2.5 rounded transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
-              Send another message
+              {t('common.contact.sendAnother')}
             </button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="relative z-10 space-y-8">
+          <form ref={formRef} onSubmit={handleSubmit} className="relative z-10 space-y-8" noValidate>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Name field */}
               <div className="flex flex-col space-y-2">
@@ -72,17 +142,26 @@ export const ContactForm: FC = () => {
                   htmlFor="name"
                   className="font-mono text-[11px] font-bold tracking-widest text-on-surface-variant"
                 >
-                  FULL NAME
+                  {t('common.contact.nameLabel')}
                 </label>
                 <input
                   id="name"
                   type="text"
-                  required
+                  autoComplete="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="John Doe"
-                  className="w-full bg-transparent border-0 border-b-2 border-outline/30 focus:border-primary focus:ring-0 text-on-surface px-0 py-3 transition-all duration-200 placeholder:text-outline/50 focus:outline-none"
+                  onBlur={() => handleBlur('name')}
+                  placeholder={t('common.contact.namePlaceholder')}
+                  aria-invalid={!!(touched.name && errors.name)}
+                  aria-describedby={errors.name ? 'name-error' : undefined}
+                  className="w-full bg-transparent border-0 border-b-2 border-outline/50 focus:border-primary focus:ring-0 text-on-surface px-0 py-3 transition-all duration-200 placeholder:text-outline/70 focus:outline-none focus-visible:border-primary"
                 />
+                {touched.name && errors.name && (
+                  <p id="name-error" role="alert" className="text-red-600 text-xs mt-1 flex items-center gap-1">
+                    <span className="material-symbols-outlined text-sm" aria-hidden="true">error</span>
+                    {errors.name}
+                  </p>
+                )}
               </div>
 
               {/* Email field */}
@@ -91,17 +170,27 @@ export const ContactForm: FC = () => {
                   htmlFor="email"
                   className="font-mono text-[11px] font-bold tracking-widest text-on-surface-variant"
                 >
-                  CORPORATE EMAIL
+                  {t('common.contact.emailLabel')}
                 </label>
                 <input
                   id="email"
                   type="email"
-                  required
+                  autoComplete="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="john@company.com"
-                  className="w-full bg-transparent border-0 border-b-2 border-outline/30 focus:border-primary focus:ring-0 text-on-surface px-0 py-3 transition-all duration-200 placeholder:text-outline/50 focus:outline-none"
+                  onBlur={() => handleBlur('email')}
+                  placeholder={t('common.contact.emailPlaceholder')}
+                  aria-invalid={!!(touched.email && errors.email)}
+                  aria-describedby={errors.email ? 'email-error' : 'email-hint'}
+                  className="w-full bg-transparent border-0 border-b-2 border-outline/50 focus:border-primary focus:ring-0 text-on-surface px-0 py-3 transition-all duration-200 placeholder:text-outline/70 focus:outline-none focus-visible:border-primary"
                 />
+                <p id="email-hint" className="text-outline text-xs">{t('common.contact.emailHint')}</p>
+                {touched.email && errors.email && (
+                  <p id="email-error" role="alert" className="text-red-600 text-xs mt-1 flex items-center gap-1">
+                    <span className="material-symbols-outlined text-sm" aria-hidden="true">error</span>
+                    {errors.email}
+                  </p>
+                )}
               </div>
             </div>
 
@@ -111,37 +200,47 @@ export const ContactForm: FC = () => {
                 htmlFor="interest"
                 className="font-mono text-[11px] font-bold tracking-widest text-on-surface-variant"
               >
-                AREA OF INTEREST
+                {t('common.contact.interestLabel')}
               </label>
               <div className="relative">
                 <select
                   id="interest"
-                  required
                   value={interest}
                   onChange={(e) => setInterest(e.target.value)}
-                  className="w-full bg-transparent border-0 border-b-2 border-outline/30 focus:border-primary focus:ring-0 text-on-surface px-0 py-3 transition-all duration-200 appearance-none cursor-pointer focus:outline-none"
+                  onBlur={() => handleBlur('interest')}
+                  aria-invalid={!!(touched.interest && errors.interest)}
+                  aria-describedby={errors.interest ? 'interest-error' : undefined}
+                  className="w-full bg-transparent border-0 border-b-2 border-outline/50 focus:border-primary focus:ring-0 text-on-surface px-0 py-3 transition-all duration-200 appearance-none cursor-pointer focus:outline-none focus-visible:border-primary pr-8"
                 >
-                  <option value="" className="text-on-surface bg-white">Select an option</option>
-                  <option value="cloud" className="text-on-surface bg-white">Cloud Architecture</option>
-                  <option value="security" className="text-on-surface bg-white">Cybersecurity</option>
-                  <option value="software" className="text-on-surface bg-white">Software Engineering</option>
+                  <option value="" className="text-on-surface bg-white">{t('common.contact.interestPlaceholder')}</option>
+                  {interestOptions.map((opt) => (
+                    <option key={opt.value} value={opt.value} className="text-on-surface bg-white">
+                      {opt.label}
+                    </option>
+                  ))}
                 </select>
-                <span className="material-symbols-outlined absolute right-0 top-3 text-on-surface-variant pointer-events-none">
+                <span className="material-symbols-outlined absolute right-0 top-3 text-on-surface-variant pointer-events-none" aria-hidden="true">
                   expand_more
                 </span>
               </div>
+              {touched.interest && errors.interest && (
+                <p id="interest-error" role="alert" className="text-red-600 text-xs mt-1 flex items-center gap-1">
+                  <span className="material-symbols-outlined text-sm" aria-hidden="true">error</span>
+                  {errors.interest}
+                </p>
+              )}
             </div>
 
             {/* Submit button */}
             <div className="pt-8 text-center">
               <button
                 type="submit"
-                className="w-full md:w-auto min-w-[240px] bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded font-mono text-[12px] font-bold tracking-wider transition-all shadow-lg text-lg uppercase cursor-pointer"
+                className="w-full md:w-auto min-w-[240px] bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded font-mono text-[12px] font-bold tracking-wider transition-all shadow-lg text-lg uppercase cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
-                REQUEST CONTACT
+                {t('common.contact.submit')}
               </button>
-              <p className="mt-4 text-outline text-xs">
-                Guaranteed response within 24 business hours.
+              <p className="mt-4 text-outline/70 text-xs">
+                {t('common.contact.responseNote')}
               </p>
             </div>
           </form>

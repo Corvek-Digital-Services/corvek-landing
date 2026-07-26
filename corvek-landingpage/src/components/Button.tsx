@@ -11,7 +11,7 @@ export const Button: FC<ButtonProps> = ({
   className = '',
   ...props
 }) => {
-  const baseClasses = 'px-6 py-2.5 md:px-8 md:py-4 font-mono text-[11px] uppercase tracking-wider font-semibold transition-all duration-300 focus:outline-none rounded'
+  const baseClasses = 'px-6 py-2.5 md:px-8 md:py-4 font-mono text-[11px] uppercase tracking-wider font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded'
   
   const variantClasses =
     variant === 'primary'

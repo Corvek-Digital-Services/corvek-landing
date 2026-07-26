@@ -1,0 +1,99 @@
+{
+  "common": {
+    "skipToContent": "Skip to main content",
+    "nav": {
+      "brand": "Corvek Digital",
+      "services": "Services",
+      "solutions": "Solutions",
+      "about": "About",
+      "contact": "Contact",
+      "scheduleConsultation": "Schedule Consultation",
+      "languageLabel": "Language",
+      "toggleMenu": "Toggle menu",
+      "mobileMenuLabel": "Main menu"
+    },
+    "hero": {
+      "badge": "ELITE IT CONSULTING",
+      "title": "Digital Ingenuity.",
+      "subtitle": "Intelligence that Evolves.",
+      "description": "High-precision IT consulting solutions, inspired by agility and the strategic use of tools to transform your business into a digital powerhouse.",
+      "ctaPrimary": "Schedule Strategic Consultation",
+      "ctaSecondary": "Explore Services",
+      "logoAlt": "Corvek Digital Geometric Logo"
+    },
+    "services": {
+      "title": "Precision Architecture",
+      "subtitle": "Methodical approach to complex technological challenges.",
+      "cloud": {
+        "title": "Cloud Architecture",
+        "description": "Intelligent scaling and resilient infrastructures designed for high availability and peak performance in global environments.",
+        "cta": "EXPLORE SOLUTIONS"
+      },
+      "security": {
+        "title": "Cybersecurity",
+        "description": "Proactive asset shielding and Zero Trust architectures to protect your most valuable business intelligence.",
+        "cta": "SECURE ASSETS"
+      },
+      "software": {
+        "title": "Software Engineering",
+        "description": "Robust and handcrafted code. Complex systems development with advanced design patterns and rigorous quality assurance.",
+        "cta": "VIEW METHODOLOGY"
+      }
+    },
+    "values": {
+      "title": "The Corvek Factor",
+      "description": "Our philosophy is based on pragmatic intelligence, complex problem solving, and technical mastery. We don't just implement technology; we orchestrate solutions that drive real-world value.",
+      "pragmatic": {
+        "title": "Pragmatic Intelligence",
+        "description": "Viable and scalable solutions, not just theoretical ones that look good on paper."
+      },
+      "mastery": {
+        "title": "Technical Mastery",
+        "description": "Excellence in every line of code and infrastructure node we touch."
+      },
+      "precision": {
+        "title": "Absolute Precision",
+        "subtitle": "OUR CORE STANDARD"
+      }
+    },
+    "contact": {
+      "title": "Start the Transformation",
+      "description": "Schedule a strategic technical consultation with our lead architects today.",
+      "nameLabel": "FULL NAME",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "CORPORATE EMAIL",
+      "emailPlaceholder": "john@company.com",
+      "emailHint": "Format: name@company.com",
+      "interestLabel": "AREA OF INTEREST",
+      "interestPlaceholder": "Select an option",
+      "interestOptions": {
+        "cloud": "Cloud Architecture",
+        "security": "Cybersecurity",
+        "software": "Software Engineering"
+      },
+      "submit": "REQUEST CONTACT",
+      "responseNote": "Guaranteed response within 24 business hours.",
+      "thankYou": "Thank You, {{name}}!",
+      "successMessage": "Your request regarding <strong>{{interest}}</strong> has been received successfully. A lead architect will contact you within 24 business hours.",
+      "sendAnother": "Send another message",
+      "errors": {
+        "nameRequired": "Please enter your full name.",
+        "emailRequired": "Please enter your email address.",
+        "emailInvalid": "Please enter a valid email address.",
+        "interestRequired": "Please select an area of interest."
+      }
+    },
+    "footer": {
+      "description": "Architectural IT Excellence for the modern enterprise. Bridging the gap between complex engineering and strategic business goals.",
+      "copyright": "{{year}} Corvek Digital Services.",
+      "solutions": "SOLUTIONS",
+      "company": "COMPANY",
+      "legal": "LEGAL",
+      "aboutUs": "About Us",
+      "consultancy": "Consultancy",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "comingSoon": "Coming soon"
+    }
+  }
+}

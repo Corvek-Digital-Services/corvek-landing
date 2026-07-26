@@ -16,6 +16,16 @@ const meta: Meta<typeof Button> = {
       description: 'The text or elements inside the button',
     },
   },
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          { id: 'color-contrast', enabled: true },
+          { id: 'focus-order-semantics', enabled: true },
+        ],
+      },
+    },
+  },
 }
 
 export default meta

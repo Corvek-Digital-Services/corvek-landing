@@ -1,6 +1,9 @@
 import type { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export const Values: FC = () => {
+  const { t } = useTranslation()
+
   return (
     <section
       id="about"
@@ -11,25 +14,25 @@ export const Values: FC = () => {
           {/* Left Column: text description and items */}
           <div>
             <h2 className="text-3xl md:text-[40px] font-headline text-on-surface mb-6 font-bold">
-              The Corvek Factor
+              {t('common.values.title')}
             </h2>
             <p className="text-base md:text-lg text-on-surface-variant mb-10 leading-relaxed">
-              Our philosophy is based on pragmatic intelligence, complex problem solving, and technical mastery. We don't just implement technology; we orchestrate solutions that drive real-world value.
+              {t('common.values.description')}
             </p>
             <div className="space-y-8">
               {/* Item 1 */}
               <div className="flex items-start gap-6">
                 <div className="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary-dark">
-                  <span className="material-symbols-outlined font-bold">
+                  <span className="material-symbols-outlined font-bold" aria-hidden="true">
                     check_circle
                   </span>
                 </div>
                 <div>
                   <h4 className="text-lg font-headline text-on-surface mb-1 font-bold">
-                    Pragmatic Intelligence
+                    {t('common.values.pragmatic.title')}
                   </h4>
                   <p className="text-sm text-on-surface-variant">
-                    Viable and scalable solutions, not just theoretical ones that look good on paper.
+                    {t('common.values.pragmatic.description')}
                   </p>
                 </div>
               </div>
@@ -37,16 +40,16 @@ export const Values: FC = () => {
               {/* Item 2 */}
               <div className="flex items-start gap-6">
                 <div className="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary-dark">
-                  <span className="material-symbols-outlined font-bold">
+                  <span className="material-symbols-outlined font-bold" aria-hidden="true">
                     architecture
                   </span>
                 </div>
                 <div>
                   <h4 className="text-lg font-headline text-on-surface mb-1 font-bold">
-                    Technical Mastery
+                    {t('common.values.mastery.title')}
                   </h4>
                   <p className="text-sm text-on-surface-variant">
-                    Excellence in every line of code and infrastructure node we touch.
+                    {t('common.values.mastery.description')}
                   </p>
                 </div>
               </div>
@@ -57,19 +60,19 @@ export const Values: FC = () => {
           <div className="relative">
             <div className="aspect-square bg-surface-container rounded-3xl flex flex-col items-center justify-center p-16 border border-outline/10 shadow-clean">
               <div className="text-center">
-                <span className="material-symbols-outlined text-7xl text-primary mb-6 icon-filled">
+                <span className="material-symbols-outlined text-7xl text-primary mb-6 icon-filled" aria-hidden="true">
                   precision_manufacturing
                 </span>
                 <h3 className="text-2xl font-headline text-on-surface font-bold">
-                  Absolute Precision
+                  {t('common.values.precision.title')}
                 </h3>
                 <p className="text-on-surface-variant mt-4 font-mono text-[11px] font-semibold tracking-widest uppercase">
-                  OUR CORE STANDARD
+                  {t('common.values.precision.subtitle')}
                 </p>
               </div>
             </div>
             {/* Glowing glow effect background */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl -z-10" aria-hidden="true"></div>
           </div>
         </div>
       </div>

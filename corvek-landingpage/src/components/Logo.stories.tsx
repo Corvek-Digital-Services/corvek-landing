@@ -15,6 +15,16 @@ const meta: Meta<typeof Logo> = {
       description: 'Tailwind utility classes for custom styling',
     },
   },
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          { id: 'svg-img-alt', enabled: true },
+          { id: 'document-title', enabled: true },
+        ],
+      },
+    },
+  },
 }
 
 export default meta
