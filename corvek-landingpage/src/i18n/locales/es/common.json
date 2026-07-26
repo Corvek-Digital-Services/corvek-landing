@@ -5,7 +5,7 @@
       "brand": "Corvek Digital",
       "services": "Servicios",
       "solutions": "Soluciones",
-      "about": "Nosotros",
+      "about": "Cómo trabajamos",
       "contact": "Contacto",
       "scheduleConsultation": "Agendar Consulta",
       "languageLabel": "Idioma",
@@ -13,87 +13,86 @@
       "mobileMenuLabel": "Menú principal"
     },
     "hero": {
-      "badge": "CONSULTORÍA IT DE ÉLITE",
-      "title": "Ingenio Digital.",
-      "subtitle": "Inteligencia que Evoluciona.",
-      "description": "Soluciones de consultoría IT de alta precisión, inspiradas en la agilidad y el uso estratégico de herramientas para transformar tu negocio en una potencia digital.",
-      "ctaPrimary": "Agendar Consulta Estratégica",
-      "ctaSecondary": "Explorar Servicios",
-      "logoAlt": "Logo Geométrico Corvek Digital"
+      "badge": "CONSULTORÍA IT",
+      "title": "Software que se ajusta a tu realidad.",
+      "subtitle": "Hecho con cuidado, entregado a tiempo.",
+      "description": "Trabajamos con equipos que necesitan consultoría IT bien hecha. Escuchamos tu contexto, priorizamos la calidad en cada decisión y proponemos soluciones que resuelven el problema — no las que quedan mejor en una presentación.",
+      "ctaPrimary": "Cuéntanos tu proyecto",
+      "ctaSecondary": "Ver qué hacemos",
+      "logoAlt": "Logo de Corvek Digital"
     },
     "services": {
-      "title": "Arquitectura de Precisión",
-      "subtitle": "Enfoque metódico para desafíos tecnológicos complejos.",
+      "title": "Qué hacemos",
+      "subtitle": "Tres áreas en las que podemos ayudar a tu equipo, con el mismo estándar de trabajo en todas.",
       "cloud": {
-        "title": "Arquitectura Cloud",
-        "description": "Escalado inteligente e infraestructuras resilientes diseñadas para alta disponibilidad y rendimiento óptimo en entornos globales.",
-        "cta": "EXPLORAR SOLUCIONES"
+        "title": "Infraestructura cloud",
+        "description": "Diseñamos y operamos entornos cloud confiables, mantenibles y dimensionados a tus necesidades reales — sin sobre-ingeniería.",
+        "cta": "HABLAR DE TU INFRAESTRUCTURA"
       },
-      "security": {
-        "title": "Ciberseguridad",
-        "description": "Protección proactiva de activos y arquitecturas Zero Trust para proteger tu inteligencia de negocio más valiosa.",
-        "cta": "PROTEGER ACTIVOS"
+      "platforms": {
+        "title": "Plataformas y productos digitales",
+        "description": "MVPs, plataformas internas y productos digitales construidos con tu equipo, no para él. De la idea a producción, enfocados en lo que los usuarios realmente necesitan.",
+        "cta": "EMPEZAR UN PRODUCTO"
       },
       "software": {
-        "title": "Ingeniería de Software",
-        "description": "Código robusto y artesanal. Desarrollo de sistemas complejos con patrones de diseño avanzados y aseguramiento de calidad riguroso.",
-        "cta": "VER METODOLOGÍA"
-      }
-    },
-    "values": {
-      "title": "El Factor Corvek",
-      "description": "Nuestra filosofía se basa en inteligencia pragmática, resolución de problemas complejos y dominio técnico. No solo implementamos tecnología; orquestamos soluciones que generan valor real.",
-      "pragmatic": {
-        "title": "Inteligencia Pragmática",
-        "description": "Soluciones viables y escalables, no solo teóricas que lucen bien en papel."
-      },
-      "mastery": {
-        "title": "Dominio Técnico",
-        "description": "Excelencia en cada línea de código y nodo de infraestructura que tocamos."
-      },
-      "precision": {
-        "title": "Precisión Absoluta",
-        "subtitle": "NUESTRO ESTÁNDAR CENTRAL"
+        "title": "Software a medida",
+        "description": "Código legible, probado y pensado para que tu equipo lo mantenga después de la entrega.",
+        "cta": "EMPEZAR UN PROYECTO"
       }
     },
     "solutions": {
-      "title": "Soluciones por Industria",
-      "subtitle": "Enfoques personalizados para tu sector.",
+      "title": "Cómo trabajamos normalmente",
+      "subtitle": "Dos modalidades habituales de colaboración. Adaptamos el alcance y el ritmo a tu realidad, no al revés.",
       "migration": {
-        "title": "Migración Cloud",
-        "description": "Transición sin interrupciones de tu infraestructura a la nube con cero tiempo de inactividad y gestión optimizada de costos.",
-        "cta": "INICIAR MIGRACIÓN"
-      },
-      "audit": {
-        "title": "Auditoría de Seguridad",
-        "description": "Evaluación integral de vulnerabilidades y pruebas de penetración para identificar y neutralizar amenazas antes de que ataquen.",
-        "cta": "AUDITAR AHORA"
+        "title": "Migración a cloud",
+        "description": "Movemos sistemas a la nube sin interrumpir a tus usuarios. Planeamos el cutover contigo, no por ti.",
+        "cta": "PLANIFICAR UNA MIGRACIÓN"
       },
       "development": {
-        "title": "Desarrollo a Medida",
-        "description": "Soluciones de software diseñadas desde cero para coincidir exactamente con tus requisitos y flujos de trabajo empresariales.",
-        "cta": "CONSTRUYE CON NOSOTROS"
+        "title": "Desarrollo de proyecto",
+        "description": "Nos integramos a tu equipo por la duración del proyecto, con alcance claro, plazos honestos y código que tus desarrolladores quieran heredar.",
+        "cta": "EMPEZAR UN PROYECTO"
+      }
+    },
+    "values": {
+      "title": "Cómo trabajamos",
+      "description": "Cuatro principios que nos autoexigimos en cada proyecto. No son eslóganes — son los criterios que usamos cuando decimos que sí, cuando cuestionamos, y cuando recomendamos un camino distinto.",
+      "commitment": {
+        "title": "Nos tomamos en serio el compromiso",
+        "description": "Lo que prometemos lo cumplimos. Si algo no va a funcionar, preferimos decirte ahora a entregarte algo con lo que no quedes conforme."
+      },
+      "quality": {
+        "title": "La calidad primero",
+        "description": "Preferimos entregar menos de lo prometido a más de lo que podamos avalar. Cada línea de código, cada configuración, cada documento — tiene que ser algo que aceptaríamos de otro."
+      },
+      "context": {
+        "title": "Nos adaptamos a tu contexto",
+        "description": "Cada equipo y cada proyecto son distintos. No aplicamos una receta fija — preguntamos, escuchamos y ajustamos el approach a cómo trabajas realmente."
+      },
+      "propose": {
+        "title": "Proponemos, no solo ejecutamos",
+        "description": "Cuando vemos un mejor camino, lo decimos. Nos contratas por nuestro criterio, no solo por nuestras manos."
       }
     },
     "contact": {
-      "title": "Inicia la Transformación",
-      "description": "Agenda una consulta técnica estratégica con nuestros arquitectos líderes hoy.",
+      "title": "Hablemos",
+      "description": "Cuéntanos un poco sobre lo que necesitas. Te respondemos en un día hábil para agendar una conversación — sin pitch de ventas, solo una charla real sobre si podemos ayudar.",
       "nameLabel": "NOMBRE COMPLETO",
       "namePlaceholder": "Juan Pérez",
-      "emailLabel": "CORREO CORPORATIVO",
+      "emailLabel": "CORREO ELECTRÓNICO",
       "emailPlaceholder": "juan@empresa.com",
       "emailHint": "Formato: nombre@empresa.com",
       "interestLabel": "ÁREA DE INTERÉS",
       "interestPlaceholder": "Selecciona una opción",
       "interestOptions": {
         "cloud": "Arquitectura Cloud",
-        "security": "Ciberseguridad",
-        "software": "Ingeniería de Software"
+        "platforms": "Plataformas y Productos",
+        "software": "Software a Medida"
       },
-      "submit": "SOLICITAR CONTACTO",
-      "responseNote": "Respuesta garantizada en 24 horas hábiles.",
-      "thankYou": "¡Gracias, {{name}}!",
-      "successMessage": "Tu solicitud sobre <strong>{{interest}}</strong> ha sido recibida exitosamente. Un arquitecto líder te contactará en 24 horas hábiles.",
+      "submit": "ENVIAR",
+      "responseNote": "Respondemos en un día hábil. Sin respuestas automáticas, sin comerciales — alguien del equipo lee lo que envías.",
+      "thankYou": "Gracias, {{name}}.",
+      "successMessage": "Recibimos tu mensaje sobre <strong>{{interest}}</strong>. Alguien del equipo lo leerá y te responderá en un día hábil.",
       "sendAnother": "Enviar otro mensaje",
       "errors": {
         "nameRequired": "Por favor ingresa tu nombre completo.",
@@ -103,16 +102,21 @@
       }
     },
     "footer": {
-      "description": "Excelencia IT arquitectónica para la empresa moderna. Cerrando la brecha entre ingeniería compleja y objetivos estratégicos de negocio.",
+      "description": "Consultoría IT para equipos que quieren el trabajo bien hecho. Cloud, plataformas y software a medida — adaptado a tu contexto.",
       "copyright": "{{year}} Corvek Digital Services.",
-      "solutions": "SOLUCIONES",
+      "solutions": "SERVICIOS",
       "company": "EMPRESA",
       "legal": "LEGAL",
-      "aboutUs": "Nosotros",
-      "consultancy": "Consultoría",
+      "aboutUs": "Cómo trabajamos",
+      "consultancy": "Modalidades de colaboración",
       "privacyPolicy": "Política de Privacidad",
       "termsOfService": "Términos de Servicio",
       "comingSoon": "Próximamente"
+    },
+    "errorBoundary": {
+      "title": "Algo se rompió",
+      "description": "La página no cargó correctamente. Por favor recarga, y si sigue pasando escríbenos a contact@corvek.com.",
+      "button": "Recargar"
     }
   }
 }

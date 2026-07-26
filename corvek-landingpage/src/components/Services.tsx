@@ -54,17 +54,17 @@ export const Services: FC = () => {
             </div>
           </div>
 
-          {/* Service 2 (Cybersecurity) - spans 4 cols on desktop */}
+          {/* Service 2 (Platforms) - spans 4 cols on desktop */}
           <div className="md:col-span-4 bg-white rounded-xl p-10 border border-outline/10 shadow-clean flex flex-col justify-between group">
             <div>
               <div className="w-14 h-14 bg-primary-dark/10 rounded-lg flex items-center justify-center mb-8 text-primary-dark">
-                <Icon name="security" size={32} filled />
+                <Icon name="rocket_launch" size={32} filled />
               </div>
               <h3 className="text-xl md:text-2xl font-headline text-on-surface mb-4 font-bold">
-                {t('common.services.security.title')}
+                {t('common.services.platforms.title')}
               </h3>
               <p className="text-sm md:text-base text-on-surface-variant leading-relaxed">
-                {t('common.services.security.description')}
+                {t('common.services.platforms.description')}
               </p>
             </div>
             <div className="mt-8">
@@ -76,7 +76,7 @@ export const Services: FC = () => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
                 }}
               >
-                {t('common.services.security.cta')}{' '}
+                {t('common.services.platforms.cta')}{' '}
                 <Icon name="arrow_forward" size={20} className="ml-1 transition-transform group-hover:translate-x-1" />
               </a>
             </div>

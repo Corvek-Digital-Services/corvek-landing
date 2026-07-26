@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Icon } from './Icon'
 
 interface SolutionCardProps {
-  icon: 'cloud_sync' | 'security' | 'code_blocks'
+  icon: 'cloud_sync' | 'code_blocks'
   title: string
   description: string
   cta: string
@@ -49,12 +49,6 @@ export const Solutions: FC = () => {
       cta: t('common.solutions.migration.cta'),
     },
     {
-      icon: 'security' as const,
-      title: t('common.solutions.audit.title'),
-      description: t('common.solutions.audit.description'),
-      cta: t('common.solutions.audit.cta'),
-    },
-    {
       icon: 'code_blocks' as const,
       title: t('common.solutions.development.title'),
       description: t('common.solutions.development.description'),
@@ -80,7 +74,7 @@ export const Solutions: FC = () => {
         </div>
 
         {/* Solutions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {solutions.map((sol) => (
             <SolutionCard
               key={sol.title}

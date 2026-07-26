@@ -55,7 +55,7 @@ export const Footer: FC = () => {
                     document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
                   }}
                 >
-                  {t('common.services.security.title')}
+                  {t('common.services.platforms.title')}
                 </a>
                 <a
                   className="text-sm text-on-surface-variant hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1"
@@ -88,10 +88,10 @@ export const Footer: FC = () => {
                 </a>
                 <a
                   className="text-sm text-on-surface-variant hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded px-1"
-                  href="#services"
+                  href="#solutions"
                   onClick={(e) => {
                     e.preventDefault()
-                    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+                    document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })
                   }}
                 >
                   {t('common.footer.consultancy')}

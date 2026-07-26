@@ -5,7 +5,7 @@
       "brand": "Corvek Digital",
       "services": "Services",
       "solutions": "Solutions",
-      "about": "About",
+      "about": "How we work",
       "contact": "Contact",
       "scheduleConsultation": "Schedule Consultation",
       "languageLabel": "Language",
@@ -13,87 +13,86 @@
       "mobileMenuLabel": "Main menu"
     },
     "hero": {
-      "badge": "ELITE IT CONSULTING",
-      "title": "Digital Ingenuity.",
-      "subtitle": "Intelligence that Evolves.",
-      "description": "High-precision IT consulting solutions, inspired by agility and the strategic use of tools to transform your business into a digital powerhouse.",
-      "ctaPrimary": "Schedule Strategic Consultation",
-      "ctaSecondary": "Explore Services",
-      "logoAlt": "Corvek Digital Geometric Logo"
+      "badge": "IT CONSULTING",
+      "title": "Software that fits your reality.",
+      "subtitle": "Built with care, delivered on time.",
+      "description": "We work with teams that need IT consulting done right. We listen to your context, prioritize quality in every decision, and propose solutions that actually solve the problem — not the ones that look best on a slide.",
+      "ctaPrimary": "Tell us about your project",
+      "ctaSecondary": "See what we do",
+      "logoAlt": "Corvek Digital logo"
     },
     "services": {
-      "title": "Precision Architecture",
-      "subtitle": "Methodical approach to complex technological challenges.",
+      "title": "What we do",
+      "subtitle": "Three areas where we can help your team, with the same standard of work across all of them.",
       "cloud": {
-        "title": "Cloud Architecture",
-        "description": "Intelligent scaling and resilient infrastructures designed for high availability and peak performance in global environments.",
-        "cta": "EXPLORE SOLUTIONS"
+        "title": "Cloud infrastructure",
+        "description": "We design and operate cloud environments that are reliable, maintainable, and sized to your actual needs — not over-engineered.",
+        "cta": "TALK ABOUT YOUR INFRASTRUCTURE"
       },
-      "security": {
-        "title": "Cybersecurity",
-        "description": "Proactive asset shielding and Zero Trust architectures to protect your most valuable business intelligence.",
-        "cta": "SECURE ASSETS"
+      "platforms": {
+        "title": "Platforms & digital products",
+        "description": "MVPs, internal platforms, and digital products built with your team, not for them. From idea to production, with a focus on what users actually need.",
+        "cta": "START A PRODUCT"
       },
       "software": {
-        "title": "Software Engineering",
-        "description": "Robust and handcrafted code. Complex systems development with advanced design patterns and rigorous quality assurance.",
-        "cta": "VIEW METHODOLOGY"
-      }
-    },
-    "values": {
-      "title": "The Corvek Factor",
-      "description": "Our philosophy is based on pragmatic intelligence, complex problem solving, and technical mastery. We don't just implement technology; we orchestrate solutions that drive real-world value.",
-      "pragmatic": {
-        "title": "Pragmatic Intelligence",
-        "description": "Viable and scalable solutions, not just theoretical ones that look good on paper."
-      },
-      "mastery": {
-        "title": "Technical Mastery",
-        "description": "Excellence in every line of code and infrastructure node we touch."
-      },
-      "precision": {
-        "title": "Absolute Precision",
-        "subtitle": "OUR CORE STANDARD"
+        "title": "Custom software",
+        "description": "Code that's readable, tested, and built to be maintained by your team after we hand it over.",
+        "cta": "START A PROJECT"
       }
     },
     "solutions": {
-      "title": "Industry Solutions",
-      "subtitle": "Tailored approaches for your sector.",
+      "title": "How we typically engage",
+      "subtitle": "Two common ways teams work with us. We adapt the scope and pace to your reality, not the other way around.",
       "migration": {
-        "title": "Cloud Migration",
-        "description": "Seamless transition of your infrastructure to the cloud with zero downtime and optimized cost management.",
-        "cta": "START MIGRATION"
-      },
-      "audit": {
-        "title": "Security Audit",
-        "description": "Comprehensive vulnerability assessment and penetration testing to identify and neutralize threats before they strike.",
-        "cta": "AUDIT NOW"
+        "title": "Cloud migration",
+        "description": "Moving systems to the cloud without disrupting your users. We plan the cutover with you, not for you.",
+        "cta": "PLAN A MIGRATION"
       },
       "development": {
-        "title": "Custom Development",
-        "description": "Bespoke software solutions engineered from the ground up to match your exact business requirements and workflows.",
-        "cta": "BUILD WITH US"
+        "title": "Project development",
+        "description": "We join your team for the duration of a project, with clear scope, honest timelines, and code your developers will want to inherit.",
+        "cta": "START A PROJECT"
+      }
+    },
+    "values": {
+      "title": "How we work",
+      "description": "Four principles we hold ourselves to on every project. They're not slogans — they're the criteria we use when we say yes, when we push back, and when we recommend a different path.",
+      "commitment": {
+        "title": "We take commitments seriously",
+        "description": "What we promise is what we deliver. If something isn't going to work, we'd rather tell you now than hand you something you're not happy with."
+      },
+      "quality": {
+        "title": "Quality first",
+        "description": "We'd rather deliver less than promised than more than we can vouch for. Every line of code, every configuration, every document — it has to be something we'd accept from someone else."
+      },
+      "context": {
+        "title": "We adapt to your context",
+        "description": "Every team and every project is different. We don't apply a fixed recipe — we ask, we listen, and we adjust our approach to fit how you actually work."
+      },
+      "propose": {
+        "title": "We propose, not just execute",
+        "description": "When we see a better path, we bring it up. You're hiring us for our judgment, not just our hands."
       }
     },
     "contact": {
-      "title": "Start the Transformation",
-      "description": "Schedule a strategic technical consultation with our lead architects today.",
+      "title": "Let's talk",
+      "description": "Tell us a bit about what you need. We'll get back to you within one business day to schedule a conversation — no sales pitch, just a real discussion of whether we can help.",
       "nameLabel": "FULL NAME",
       "namePlaceholder": "John Doe",
-      "emailLabel": "CORPORATE EMAIL",
+      "emailLabel": "EMAIL",
       "emailPlaceholder": "john@company.com",
       "emailHint": "Format: name@company.com",
       "interestLabel": "AREA OF INTEREST",
       "interestPlaceholder": "Select an option",
       "interestOptions": {
         "cloud": "Cloud Architecture",
-        "security": "Cybersecurity",
-        "software": "Software Engineering"
+        "platforms": "Platforms & Products",
+        "software": "Custom Software"
       },
-      "submit": "REQUEST CONTACT",
-      "responseNote": "Guaranteed response within 24 business hours.",
-      "thankYou": "Thank You, {{name}}!",
-      "successMessage": "Your request regarding <strong>{{interest}}</strong> has been received successfully. A lead architect will contact you within 24 business hours.",
+      "submit": "SEND",
+      "responseNote": "We respond within one business day. No automated replies, no salespeople — someone from the team reads what you send.",
+      "thankYou": "Thanks, {{name}}.",
+      "successMessage": "We received your message about <strong>{{interest}}</strong>. Someone from the team will read it and get back to you within one business day.",
       "sendAnother": "Send another message",
       "errors": {
         "nameRequired": "Please enter your full name.",
@@ -103,16 +102,21 @@
       }
     },
     "footer": {
-      "description": "Architectural IT Excellence for the modern enterprise. Bridging the gap between complex engineering and strategic business goals.",
+      "description": "IT consulting for teams that want the work done right. Cloud, platforms, and custom software — adapted to your context.",
       "copyright": "{{year}} Corvek Digital Services.",
-      "solutions": "SOLUTIONS",
+      "solutions": "SERVICES",
       "company": "COMPANY",
       "legal": "LEGAL",
-      "aboutUs": "About Us",
-      "consultancy": "Consultancy",
+      "aboutUs": "How we work",
+      "consultancy": "Engagement models",
       "privacyPolicy": "Privacy Policy",
       "termsOfService": "Terms of Service",
       "comingSoon": "Coming soon"
+    },
+    "errorBoundary": {
+      "title": "Something broke",
+      "description": "The page didn't load correctly. Please refresh, and if it keeps happening write to us at contact@corvek.com.",
+      "button": "Refresh"
     }
   }
 }

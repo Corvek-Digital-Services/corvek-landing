@@ -5,7 +5,7 @@ import { Icon } from './Icon'
 
 const INTEREST_LABELS: Record<string, string> = {
   cloud: 'common.contact.interestOptions.cloud',
-  security: 'common.contact.interestOptions.security',
+  platforms: 'common.contact.interestOptions.platforms',
   software: 'common.contact.interestOptions.software',
 }
 
@@ -83,7 +83,7 @@ export const ContactForm: FC = () => {
 
   const interestOptions = [
     { value: 'cloud', label: t('common.contact.interestOptions.cloud') },
-    { value: 'security', label: t('common.contact.interestOptions.security') },
+    { value: 'platforms', label: t('common.contact.interestOptions.platforms') },
     { value: 'software', label: t('common.contact.interestOptions.software') },
   ]
 
